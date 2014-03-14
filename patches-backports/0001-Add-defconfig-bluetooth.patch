@@ -1,0 +1,24 @@
+From 628293cecfa03359d2ff638c5dd0b9600b97faa8 Mon Sep 17 00:00:00 2001
+From: Andrzej Kaczmarek <andrzej.kaczmarek@tieto.com>
+Date: Fri, 14 Mar 2014 15:50:28 +0100
+Subject: [PATCH] Add defconfig-bluetooth
+
+---
+ defconfigs/bluetooth | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 defconfigs/bluetooth
+
+diff --git a/defconfigs/bluetooth b/defconfigs/bluetooth
+new file mode 100644
+index 0000000..44e7bbd
+--- /dev/null
++++ b/defconfigs/bluetooth
+@@ -0,0 +1,5 @@
++CPTCFG_BT=m
++CPTCFG_BT_RFCOMM=m
++CPTCFG_BT_BNEP=m
++CPTCFG_BT_BNEP_MC_FILTER=y
++CPTCFG_BT_BNEP_PROTO_FILTER=y
+-- 
+1.9.0
+
