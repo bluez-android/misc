@@ -1,7 +1,7 @@
-From 628293cecfa03359d2ff638c5dd0b9600b97faa8 Mon Sep 17 00:00:00 2001
+From 6ac0c10bb1636b0c846d64d16ec6a84bd139446a Mon Sep 17 00:00:00 2001
 From: Andrzej Kaczmarek <andrzej.kaczmarek@tieto.com>
 Date: Fri, 14 Mar 2014 15:50:28 +0100
-Subject: [PATCH] Add defconfig-bluetooth
+Subject: [PATCH 1/4] Add defconfig-bluetooth
 
 ---
  defconfigs/bluetooth | 5 +++++
@@ -20,5 +20,5 @@ index 0000000..44e7bbd
 +CPTCFG_BT_BNEP_MC_FILTER=y
 +CPTCFG_BT_BNEP_PROTO_FILTER=y
 -- 
-1.9.0
+1.8.4
 

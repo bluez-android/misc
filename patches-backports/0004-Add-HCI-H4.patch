@@ -1,0 +1,35 @@
+From 799b93d8d8fee15882d2e588b27a94d3b8e02fa3 Mon Sep 17 00:00:00 2001
+From: Andrzej Kaczmarek <andrzej.kaczmarek@tieto.com>
+Date: Fri, 14 Mar 2014 15:51:53 +0100
+Subject: [PATCH 4/4] Add HCI H4
+
+---
+ defconfigs/bluetooth      | 2 ++
+ drivers/bluetooth/Kconfig | 1 -
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/defconfigs/bluetooth b/defconfigs/bluetooth
+index c215d04..3639e7d 100644
+--- a/defconfigs/bluetooth
++++ b/defconfigs/bluetooth
+@@ -4,3 +4,5 @@ CPTCFG_BT_RFCOMM=m
+ CPTCFG_BT_BNEP=m
+ CPTCFG_BT_BNEP_MC_FILTER=y
+ CPTCFG_BT_BNEP_PROTO_FILTER=y
++CPTCFG_BT_HCIUART=m
++CPTCFG_BT_HCIUART_H4=y
+diff --git a/drivers/bluetooth/Kconfig b/drivers/bluetooth/Kconfig
+index acf719b..c85e168 100644
+--- a/drivers/bluetooth/Kconfig
++++ b/drivers/bluetooth/Kconfig
+@@ -29,7 +29,6 @@ config BT_HCIBTSDIO
+ config BT_HCIUART
+ 	tristate "HCI UART driver"
+ 	depends on m
+-	depends on TTY
+ 	help
+ 	  Bluetooth HCI UART driver.
+ 	  This driver is required if you want to use Bluetooth devices with
+-- 
+1.8.4
+

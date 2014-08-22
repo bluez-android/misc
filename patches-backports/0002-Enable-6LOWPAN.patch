@@ -1,0 +1,21 @@
+From e9da9c912aafdddd821304473524118e32d8430b Mon Sep 17 00:00:00 2001
+From: Lukasz Rymanowski <lukasz.rymanowski@tieto.com>
+Date: Fri, 22 Aug 2014 11:51:20 +0200
+Subject: [PATCH 2/4] Enable 6LOWPAN
+
+---
+ defconfigs/bluetooth | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/defconfigs/bluetooth b/defconfigs/bluetooth
+index 44e7bbd..c215d04 100644
+--- a/defconfigs/bluetooth
++++ b/defconfigs/bluetooth
+@@ -1,3 +1,4 @@
++CPTCFG_BT_6LOWPAN=m
+ CPTCFG_BT=m
+ CPTCFG_BT_RFCOMM=m
+ CPTCFG_BT_BNEP=m
+-- 
+1.8.4
+
