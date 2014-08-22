@@ -1,4 +1,4 @@
-From 5cd07a1757d1a92e01c643b8263536bca84fd647 Mon Sep 17 00:00:00 2001
+From 7f868b3ce1cc117be3bdd4d8d5827ee5a9c59f38 Mon Sep 17 00:00:00 2001
 From: Andrzej Kaczmarek <andrzej.kaczmarek@tieto.com>
 Date: Fri, 14 Mar 2014 15:49:24 +0100
 Subject: [PATCH 3/4] Add HCI SMD
