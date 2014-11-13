@@ -1,0 +1,34 @@
+From 4604b46d5245d6ac107323960b833209147c75cf Mon Sep 17 00:00:00 2001
+From: Lukasz Rymanowski <lukasz.rymanowski@tieto.com>
+Date: Thu, 13 Nov 2014 10:17:04 +0100
+Subject: [PATCH 5/5] Workaround for msm kernel tree
+
+Msm kernel redefines clk_enable and clk_disable.
+---
+ compat/compat-3.6.c | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/compat/compat-3.6.c b/compat/compat-3.6.c
+index c82bfb8..f3a1f89 100644
+--- a/compat/compat-3.6.c
++++ b/compat/compat-3.6.c
+@@ -148,16 +148,3 @@ int sg_alloc_table_from_pages(struct sg_table *sgt,
+ }
+ EXPORT_SYMBOL_GPL(sg_alloc_table_from_pages);
+ 
+-/* whoopsie ! */
+-#ifndef CONFIG_COMMON_CLK
+-int clk_enable(struct clk *clk)
+-{
+-	return 0;
+-}
+-EXPORT_SYMBOL_GPL(clk_enable);
+-
+-void clk_disable(struct clk *clk)
+-{
+-}
+-EXPORT_SYMBOL_GPL(clk_disable);
+-#endif
+-- 
+1.8.4
+
